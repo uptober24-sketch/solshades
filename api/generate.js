@@ -14,14 +14,14 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: "gpt-image-1.5",
         prompt: prompt,
         size: "1536x1024",
         format: "jpeg"
-      }),
+      })
     });
 
     const data = await response.json();
